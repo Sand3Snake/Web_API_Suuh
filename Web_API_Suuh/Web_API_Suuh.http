@@ -1,0 +1,6 @@
+@Web_API_Suuh_HostAddress = http://localhost:5243
+
+GET {{Web_API_Suuh_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
