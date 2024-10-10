@@ -8,6 +8,5 @@ namespace Web_API_Suuh.Model
 
         public string Descricao { get; set; } 
 
-        public virtual TbLivro? TbLivro { get; set; }
     }
 }

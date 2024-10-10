@@ -119,4 +119,3 @@ namespace Web_API_Suuh.Repositorio
         }
     }
 }
-fazer a controller de cateria

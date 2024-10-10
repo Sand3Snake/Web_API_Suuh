@@ -17,6 +17,8 @@ builder.Services.AddDbContext<BancoBibliotecaContext>(options =>
 
 // Adicione o repositório FuncionarioR
 builder.Services.AddScoped<FuncionarioRepositorio>();
+builder.Services.AddScoped<CategoriaRepositorio>();
+
 var app = builder.Build();
 
 
