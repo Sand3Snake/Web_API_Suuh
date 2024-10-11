@@ -13,7 +13,7 @@ public partial class TbMembro
 
     public string Telefone { get; set; } = null!;
 
-    public DateOnly DataCadastro { get; set; }
+    public DateTime DataCadastro { get; set; }
 
     public string TipoMembro { get; set; } = null!;
 

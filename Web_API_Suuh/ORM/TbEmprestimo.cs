@@ -7,9 +7,9 @@ public partial class TbEmprestimo
 {
     public int Id { get; set; }
 
-    public DateOnly DataEmprestimo { get; set; }
+    public DateTime DataEmprestimo { get; set; }
 
-    public DateOnly DataEvolucao { get; set; }
+    public DateTime DataEvolucao { get; set; }
 
     public int FkMembro { get; set; }
 

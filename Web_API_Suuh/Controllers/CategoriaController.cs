@@ -133,7 +133,7 @@ namespace Web_API_Suuh.Controllers
             return Ok(resultado);
         }
 
-        // DELETE api/<CateforiaController>/5
+        // DELETE api/<CategoriaController>/5
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)
         {
