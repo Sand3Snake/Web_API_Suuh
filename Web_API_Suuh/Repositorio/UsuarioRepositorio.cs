@@ -1,7 +1,8 @@
-﻿using Web_API_Suuh.Model;
+﻿using Microsoft.EntityFrameworkCore;
+
 using Web_API_Suuh.ORM;
 
-namespace Web_API_Suuh.Repositorio
+namespace ProjetoWebAPI.Repositorio
 {
     public class UsuarioRepositorio
     {
@@ -12,22 +13,12 @@ namespace Web_API_Suuh.Repositorio
             _context = context;
         }
 
-        public void Add(Usuario usuario)
+        public TbUsuario GetByCredentials(string usuario, string senha)
         {
-
-            // Cria uma nova entidade do tipo TbUsuario a partir do objeto Usuario recebido
-            var tbUsuario = new TbUsuario()
-            {
-                Usuario = usuario.Usuario1,
-                Senha = usuario.Senha,
-                
-            };
-
-            // Adiciona a entidade ao contexto
-            _context.TbUsuarios.Add(tbUsuario);
-
-            // Salva as mudanças no banco de dados
-            _context.SaveChanges();
+            // Aqui você deve usar a lógica de hash para comparar a senha
+            return _context.TbUsuarios.FirstOrDefault(u => u.Usuario == usuario && u.Senha == senha);
         }
+
+        // Você pode adicionar métodos adicionais para gerenciar usuários
     }
 }

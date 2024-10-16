@@ -1,13 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Web_API_Suuh.Model;
 using Web_API_Suuh.Repositorio;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+using System.Collections.Generic;
+using System.Linq;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Web_API_Suuh.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class CategoriaController : ControllerBase
     {
         private readonly CategoriaRepositorio _categoriaRepo;
@@ -21,145 +23,149 @@ namespace Web_API_Suuh.Controllers
         [HttpGet]
         public ActionResult<List<Categoria>> GetAll()
         {
-            // Chama o repositório para obter todas as categorias
-            var categorias = _categoriaRepo.GetAll();
-
-            // Verifica se a lista de categorias está vazia
-            if (categorias == null || !categorias.Any())
+            try
             {
-                return NotFound(new { Mensagem = "Nenhuma categoria encontrada." });
+                var categorias = _categoriaRepo.GetAll();
+
+                if (categorias == null || !categorias.Any())
+                {
+                    return NotFound(new { Mensagem = "Nenhuma categoria encontrada." });
+                }
+
+                var listaComUrl = categorias.Select(categoria => new Categoria
+                {
+                    Id = categoria.Id,
+                    Nome = categoria.Nome,
+                    Descricao = categoria.Descricao,
+                }).ToList();
+
+                return Ok(listaComUrl);
             }
-
-            // Mapeia a lista de categorias para incluir a URL da foto
-            var listaComUrl = categorias.Select(categoria => new Categoria
+            catch (Exception ex)
             {
-                Id = categoria.Id,
-                Nome = categoria.Nome,
-                Descricao = categoria.Descricao,
-                
-            });
-
-            // Retorna a lista de categorias com status 200 OK
-            return Ok(listaComUrl);
+                // Log da exceção (você pode usar um logger aqui)
+                return StatusCode(500, new { Mensagem = "Erro interno do servidor.", Detalhes = ex.Message });
+            }
         }
 
         // GET: api/Categoria/{id}
         [HttpGet("{id}")]
         public ActionResult<Categoria> GetById(int id)
         {
-            // Chama o repositório para obter o categoria pelo ID
-            var categoria = _categoriaRepo.GetById(id);
-
-            // Se a categoria não for encontrada, retorna uma resposta 404
-            if (categoria == null)
+            try
             {
-                return NotFound(new { Mensagem = "Categoria não encontrada." }); // Retorna 404 com mensagem
+                var categoria = _categoriaRepo.GetById(id);
+
+                if (categoria == null)
+                {
+                    return NotFound(new { Mensagem = "Categoria não encontrada." });
+                }
+
+                var categoriaComUrl = new Categoria
+                {
+                    Id = categoria.Id,
+                    Nome = categoria.Nome,
+                    Descricao = categoria.Descricao,
+                };
+
+                return Ok(categoriaComUrl);
             }
-
-            // Mapeia a categoria encontrada para incluir a URL da foto
-            var categoriaComUrl = new Categoria
+            catch (Exception ex)
             {
-                Id = categoria.Id,
-                Nome = categoria.Nome,
-                Descricao = categoria.Descricao,
-                
-
-            };
-
-            // Retorna a categoria com status 200 OK
-            return Ok(categoriaComUrl);
+                return StatusCode(500, new { Mensagem = "Erro interno do servidor.", Detalhes = ex.Message });
+            }
         }
 
-        // POST api/<CategoriaController>        
+        // POST api/<CategoriaController>
         [HttpPost]
         public ActionResult<object> Post([FromForm] CategoriaDto novaCategoria)
         {
-            // Cria uma nova instância do modelo Categoria a partir do DTO recebido
-            var categoria = new Categoria
+            try
             {
-                Nome = novaCategoria.Nome,
-                Descricao = novaCategoria.Descricao,
-                
-            };
+                var categoria = new Categoria
+                {
+                    Nome = novaCategoria.Nome,
+                    Descricao = novaCategoria.Descricao,
+                };
 
-            // Chama o método de adicionar do repositório, passando a foto como parâmetro
-            _categoriaRepo.Add(categoria);
+                _categoriaRepo.Add(categoria);
 
-            // Cria um objeto anônimo para retornar
-            var resultado = new
+                var resultado = new
+                {
+                    Mensagem = "Categoria cadastrada com sucesso!",
+                    Nome = categoria.Nome,
+                    Descricao = categoria.Descricao,
+                };
+
+                return Ok(resultado);
+            }
+            catch (Exception ex)
             {
-                Mensagem = "Categoria cadastrada com sucesso!",
-                Nome = categoria.Nome,
-                Descricao = categoria.Descricao,
-               
-            };
-
-            // Retorna o objeto com status 200 OK
-            return Ok(resultado);
+                return StatusCode(500, new { Mensagem = "Erro interno do servidor.", Detalhes = ex.Message });
+            }
         }
 
-        // PUT api/<CategoriaController>        
+        // PUT api/<CategoriaController>
         [HttpPut("{id}")]
         public ActionResult<object> Put(int id, [FromForm] CategoriaDto categoriaAtualizado)
         {
-            // Busca a categoria existente pelo Id
-            var categoriaExistente = _categoriaRepo.GetById(id);
-
-            // Verifica se a categoria foi encontrada
-            if (categoriaExistente == null)
+            try
             {
-                return NotFound(new { Mensagem = "Categoria não encontrada." });
+                var categoriaExistente = _categoriaRepo.GetById(id);
+
+                if (categoriaExistente == null)
+                {
+                    return NotFound(new { Mensagem = "Categoria não encontrada." });
+                }
+
+                categoriaExistente.Nome = categoriaAtualizado.Nome;
+                categoriaExistente.Descricao = categoriaAtualizado.Descricao;
+
+                _categoriaRepo.Update(categoriaExistente);
+
+                var resultado = new
+                {
+                    Mensagem = "Categoria atualizada com sucesso!",
+                    Nome = categoriaExistente.Nome,
+                    Descricao = categoriaExistente.Descricao,
+                };
+
+                return Ok(resultado);
             }
-
-            // Atualiza os dados da categoria existente com os valores do objeto recebido
-            categoriaExistente.Nome = categoriaAtualizado.Nome;
-            categoriaExistente.Descricao = categoriaAtualizado.Descricao;
-
-
-            // Chama o método de atualização do repositório, passando a nova foto
-            _categoriaRepo.Update(categoriaExistente);
-
-
-            // Cria um objeto anônimo para retornar
-            var resultado = new
+            catch (Exception ex)
             {
-                Mensagem = "Categoria atualizada com sucesso!",
-                Nome = categoriaExistente.Nome,
-                Descricao = categoriaExistente.Descricao,
-                
-            };
-
-            // Retorna o objeto com status 200 OK
-            return Ok(resultado);
+                return StatusCode(500, new { Mensagem = "Erro interno do servidor.", Detalhes = ex.Message });
+            }
         }
 
         // DELETE api/<CategoriaController>/5
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)
         {
-            // Busca o categoria existente pelo Id
-            var categoriaExistente = _categoriaRepo.GetById(id);
-
-            // Verifica se a categoria foi encontrado
-            if (categoriaExistente == null)
+            try
             {
-                return NotFound(new { Mensagem = "Categoria não encontrada." });
+                var categoriaExistente = _categoriaRepo.GetById(id);
+
+                if (categoriaExistente == null)
+                {
+                    return NotFound(new { Mensagem = "Categoria não encontrada." });
+                }
+
+                _categoriaRepo.Delete(id);
+
+                var resultado = new
+                {
+                    Mensagem = "Categoria excluída com sucesso!",
+                    Nome = categoriaExistente.Nome,
+                    Descricao = categoriaExistente.Descricao,
+                };
+
+                return Ok(resultado);
             }
-
-            // Chama o método de exclusão do repositório
-            _categoriaRepo.Delete(id);
-
-            // Cria um objeto anônimo para retornar
-            var resultado = new
+            catch (Exception ex)
             {
-                Mensagem = "Categoria excluída com sucesso!",
-                Nome = categoriaExistente.Nome,
-                Descricao = categoriaExistente.Descricao,
-               
-            };
-
-            // Retorna o objeto com status 200 OK
-            return Ok(resultado);
+                return StatusCode(500, new { Mensagem = "Erro interno do servidor.", Detalhes = ex.Message });
+            }
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Web_API_Suuh.Model
 {
-    public class UsuarioDtocs
+    public class UsuarioDto
     {
         public string Usuario1 { get; set; } = null!;
 

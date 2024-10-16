@@ -7,7 +7,7 @@ public partial class TbReserva
 {
     public int Id { get; set; }
 
-    public DateOnly DataReserva { get; set; }
+    public DateTime DataReserva { get; set; }
 
     public int FkMembro { get; set; }
 

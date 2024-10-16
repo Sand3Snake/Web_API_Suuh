@@ -1,7 +1,32 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Aluno Noite\\Documents\\Web_API_Suuh\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5157E379-2BB3-4A16-87EF-E46E5F4A177A}|Web_API_Suuh\\Web_API_Suuh.csproj|c:\\users\\aluno noite\\documents\\web_api_suuh\\web_api_suuh\\controllers\\reservacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5157E379-2BB3-4A16-87EF-E46E5F4A177A}|Web_API_Suuh\\Web_API_Suuh.csproj|solutionrelative:web_api_suuh\\controllers\\reservacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5157E379-2BB3-4A16-87EF-E46E5F4A177A}|Web_API_Suuh\\Web_API_Suuh.csproj|c:\\users\\aluno noite\\documents\\web_api_suuh\\web_api_suuh\\controllers\\membrocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5157E379-2BB3-4A16-87EF-E46E5F4A177A}|Web_API_Suuh\\Web_API_Suuh.csproj|solutionrelative:web_api_suuh\\controllers\\membrocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5157E379-2BB3-4A16-87EF-E46E5F4A177A}|Web_API_Suuh\\Web_API_Suuh.csproj|c:\\users\\aluno noite\\documents\\web_api_suuh\\web_api_suuh\\controllers\\livrocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5157E379-2BB3-4A16-87EF-E46E5F4A177A}|Web_API_Suuh\\Web_API_Suuh.csproj|solutionrelative:web_api_suuh\\controllers\\livrocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5157E379-2BB3-4A16-87EF-E46E5F4A177A}|Web_API_Suuh\\Web_API_Suuh.csproj|c:\\users\\aluno noite\\documents\\web_api_suuh\\web_api_suuh\\controllers\\funcionariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5157E379-2BB3-4A16-87EF-E46E5F4A177A}|Web_API_Suuh\\Web_API_Suuh.csproj|solutionrelative:web_api_suuh\\controllers\\funcionariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5157E379-2BB3-4A16-87EF-E46E5F4A177A}|Web_API_Suuh\\Web_API_Suuh.csproj|c:\\users\\aluno noite\\documents\\web_api_suuh\\web_api_suuh\\controllers\\emprestimocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5157E379-2BB3-4A16-87EF-E46E5F4A177A}|Web_API_Suuh\\Web_API_Suuh.csproj|solutionrelative:web_api_suuh\\controllers\\emprestimocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5157E379-2BB3-4A16-87EF-E46E5F4A177A}|Web_API_Suuh\\Web_API_Suuh.csproj|c:\\users\\aluno noite\\documents\\web_api_suuh\\web_api_suuh\\controllers\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5157E379-2BB3-4A16-87EF-E46E5F4A177A}|Web_API_Suuh\\Web_API_Suuh.csproj|solutionrelative:web_api_suuh\\controllers\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +34,89 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ReservaController.cs",
+              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Documents\\Web_API_Suuh\\Web_API_Suuh\\Controllers\\ReservaController.cs",
+              "RelativeDocumentMoniker": "Web_API_Suuh\\Controllers\\ReservaController.cs",
+              "ToolTip": "C:\\Users\\Aluno Noite\\Documents\\Web_API_Suuh\\Web_API_Suuh\\Controllers\\ReservaController.cs",
+              "RelativeToolTip": "Web_API_Suuh\\Controllers\\ReservaController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T18:58:39.499Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MembroController.cs",
+              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Documents\\Web_API_Suuh\\Web_API_Suuh\\Controllers\\MembroController.cs",
+              "RelativeDocumentMoniker": "Web_API_Suuh\\Controllers\\MembroController.cs",
+              "ToolTip": "C:\\Users\\Aluno Noite\\Documents\\Web_API_Suuh\\Web_API_Suuh\\Controllers\\MembroController.cs",
+              "RelativeToolTip": "Web_API_Suuh\\Controllers\\MembroController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T18:58:35.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LivroController.cs",
+              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Documents\\Web_API_Suuh\\Web_API_Suuh\\Controllers\\LivroController.cs",
+              "RelativeDocumentMoniker": "Web_API_Suuh\\Controllers\\LivroController.cs",
+              "ToolTip": "C:\\Users\\Aluno Noite\\Documents\\Web_API_Suuh\\Web_API_Suuh\\Controllers\\LivroController.cs",
+              "RelativeToolTip": "Web_API_Suuh\\Controllers\\LivroController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T18:58:32.169Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FuncionarioController.cs",
+              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Documents\\Web_API_Suuh\\Web_API_Suuh\\Controllers\\FuncionarioController.cs",
+              "RelativeDocumentMoniker": "Web_API_Suuh\\Controllers\\FuncionarioController.cs",
+              "ToolTip": "C:\\Users\\Aluno Noite\\Documents\\Web_API_Suuh\\Web_API_Suuh\\Controllers\\FuncionarioController.cs",
+              "RelativeToolTip": "Web_API_Suuh\\Controllers\\FuncionarioController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T18:58:27.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EmprestimoController.cs",
+              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Documents\\Web_API_Suuh\\Web_API_Suuh\\Controllers\\EmprestimoController.cs",
+              "RelativeDocumentMoniker": "Web_API_Suuh\\Controllers\\EmprestimoController.cs",
+              "ToolTip": "C:\\Users\\Aluno Noite\\Documents\\Web_API_Suuh\\Web_API_Suuh\\Controllers\\EmprestimoController.cs",
+              "RelativeToolTip": "Web_API_Suuh\\Controllers\\EmprestimoController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T18:58:23.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CategoriaController.cs",
+              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Documents\\Web_API_Suuh\\Web_API_Suuh\\Controllers\\CategoriaController.cs",
+              "RelativeDocumentMoniker": "Web_API_Suuh\\Controllers\\CategoriaController.cs",
+              "ToolTip": "C:\\Users\\Aluno Noite\\Documents\\Web_API_Suuh\\Web_API_Suuh\\Controllers\\CategoriaController.cs",
+              "RelativeToolTip": "Web_API_Suuh\\Controllers\\CategoriaController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T18:58:03.238Z",
+              "EditorCaption": ""
             }
           ]
         }

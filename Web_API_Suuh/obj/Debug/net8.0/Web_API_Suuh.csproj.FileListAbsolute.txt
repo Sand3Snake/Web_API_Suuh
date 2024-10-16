@@ -141,3 +141,5 @@ C:\Users\Aluno Noite\Documents\Web_API_Suuh\Web_API_Suuh\obj\Debug\net8.0\Web_AP
 C:\Users\Aluno Noite\Documents\Web_API_Suuh\Web_API_Suuh\obj\Debug\net8.0\Web_API_Suuh.genruntimeconfig.cache
 C:\Users\Aluno Noite\Documents\Web_API_Suuh\Web_API_Suuh\obj\Debug\net8.0\ref\Web_API_Suuh.dll
 C:\Users\Aluno Noite\Documents\Web_API_Suuh\Web_API_Suuh\obj\Debug\net8.0\Web_API_Suuh.sourcelink.json
+C:\Users\Aluno Noite\Documents\Web_API_Suuh\Web_API_Suuh\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Aluno Noite\Documents\Web_API_Suuh\Web_API_Suuh\bin\Debug\net8.0\Microsoft.Bcl.TimeProvider.dll
